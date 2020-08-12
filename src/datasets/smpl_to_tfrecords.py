@@ -121,7 +121,7 @@ def process_smpl_mocap(all_pkls, out_dir, num_shards, dataset_name):
     all_poses, all_shapes, all_shapes_unique = [], [], []
     for pkl in all_pkls:
         with open(pkl, 'rb') as f:
-            res = pickle.load(f)
+            res = pickle.load(f, encoding='latin-1')
             all_poses.append(res['poses'])
             num_poses_here = res['poses'].shape[0]
             all_shapes.append(
@@ -162,7 +162,7 @@ def process_smpl_mocap_temporal(all_pkls, out_dir, num_shards, dataset_name):
     all_poses = []
     for pkl in all_pkls:
         with open(pkl, 'rb') as f:
-            res = pickle.load(f)
+            res = pickle.load(f, encoding='latin-1')
             if 'poses' not in res.keys():
                 continue
             poses = res['poses']
