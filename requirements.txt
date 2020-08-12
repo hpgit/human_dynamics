@@ -9,6 +9,7 @@ numpy==1.16.3
 opencv-python==3.4.5.20
 scikit-image==0.15.0
 scipy==1.2.1
+tables==2.3.5
 tensorflow-gpu==1.8
 torch==0.4.0
 torchvision==0.2.2
